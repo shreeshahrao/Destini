@@ -26,13 +26,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzY-lt-oey" userLabel="Top">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="267.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6p-Ax-b5a">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6p-Ax-b5a">
                                                 <rect key="frame" x="7" y="68.5" width="400" height="130"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="130" id="4Cy-Go-sZt"/>
                                                     <constraint firstAttribute="width" constant="400" id="dfZ-DH-nfj"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -51,7 +51,13 @@
                                                     <constraint firstAttribute="width" constant="400" id="ag1-vk-mtm"/>
                                                     <constraint firstAttribute="height" constant="100" id="vnT-IU-Gzx"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" backgroundImage="choice1Background"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="Go Left" backgroundImage="choice1Background">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ajg-GD-O69"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -68,7 +74,13 @@
                                                     <constraint firstAttribute="width" constant="400" id="OZX-lL-t2H"/>
                                                     <constraint firstAttribute="height" constant="100" id="cc7-0I-1nq"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" backgroundImage="choice2Background"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="Go Right" backgroundImage="choice2Background">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gBE-RY-ODt"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -92,6 +104,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ysQ-01-y0j" secondAttribute="bottom" id="rkT-lG-Ahz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="choice1Button" destination="xMH-tr-bp9" id="QMW-7o-NbQ"/>
+                        <outlet property="choice2Button" destination="x32-fR-jVy" id="ks3-g3-8HS"/>
+                        <outlet property="storyLabel" destination="y6p-Ax-b5a" id="iD0-aD-Xk0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
